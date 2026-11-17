@@ -1,0 +1,56 @@
+:root {
+  font-family: "Inter Variable", Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+  --rs-midnight: #243b53;
+  --rs-steel: #829ab1;
+  --rs-ice: #f0f4f8;
+  --rs-charcoal: #202a36;
+  --rs-serif: "Instrument Serif", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --bg: var(--rs-ice);
+  --surface: #fff;
+  --surface-soft: color-mix(in srgb, var(--rs-steel) 16%, var(--rs-ice));
+  --surface-inverse: var(--rs-midnight);
+  --on-inverse: var(--rs-ice);
+  --ink: var(--rs-charcoal);
+  --muted: color-mix(in srgb, var(--rs-charcoal) 74%, var(--rs-steel));
+  --line: color-mix(in srgb, var(--rs-steel) 40%, transparent);
+  --accent: var(--rs-midnight);
+  --on-accent: var(--rs-ice);
+  --accent-soft: color-mix(in srgb, var(--rs-steel) 20%, var(--rs-ice));
+  --accent-ink: color-mix(in srgb, var(--rs-midnight) 90%, var(--rs-steel));
+  --focus: var(--rs-midnight);
+  --shadow: 0 1px 2px rgb(32 42 54 / 8%), 0 18px 40px -22px rgb(36 59 83 / 35%);
+  --radius-control: 3px;
+  --radius-card: 4px;
+  --radius-panel: 4px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --container: 1200px;
+  --section: clamp(3.5rem, 6vw, 5.5rem);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: color-mix(in srgb, var(--rs-charcoal) 76%, #000);
+  --surface: var(--rs-charcoal);
+  --surface-soft: color-mix(in srgb, var(--rs-midnight) 50%, var(--rs-charcoal));
+  --surface-inverse: var(--rs-ice);
+  --on-inverse: var(--rs-charcoal);
+  --ink: var(--rs-ice);
+  --muted: color-mix(in srgb, var(--rs-ice) 66%, var(--rs-steel));
+  --line: color-mix(in srgb, var(--rs-steel) 28%, transparent);
+  --accent: var(--rs-ice);
+  --on-accent: var(--rs-charcoal);
+  --accent-soft: color-mix(in srgb, var(--rs-steel) 22%, var(--rs-charcoal));
+  --accent-ink: color-mix(in srgb, var(--rs-steel) 68%, var(--rs-ice));
+  --focus: var(--rs-ice);
+  --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 18px 40px -22px rgb(0 0 0 / 70%);
+}

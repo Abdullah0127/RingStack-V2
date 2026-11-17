@@ -1,0 +1,5 @@
+import { Link, useLocation } from 'react-router-dom'
+import blogPosts from '../data/blogPosts.js'
+import { CtaBand } from '../components/Sections.jsx'
+import PageHero from '../components/PageHero.jsx'
+export default function Blog(){const resources=useLocation().pathname==='/resources';return <><PageHero eyebrow={resources?'Ringstack resources':'Ringstack insights'} title={resources?'Resources for practical campaign planning':'Clear thinking on calls, leads and campaigns.'} intro="Useful guidance for advertisers and publishers working with performance campaigns." image="meeting"/><section className="section"><div className="container three-grid resource-grid">{blogPosts.map((post)=><article className="card resource-card" key={post.slug}><div className="blog-art" aria-hidden="true">{post.artMark||'R'}</div><p className="section-kicker">{post.category} · {post.readTime}</p>{post.isSample&&<p className="article-sample-label">Sample editorial content — for review</p>}<h2>{post.title}</h2><p>{post.excerpt}</p><Link className="card-link" to={`/blog/${post.slug}`}>Read article <span aria-hidden="true">→</span></Link></article>)}</div></section><CtaBand/></>}
